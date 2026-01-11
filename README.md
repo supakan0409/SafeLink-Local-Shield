@@ -1,6 +1,6 @@
 # <img width="50" alt="Image" src="https://github.com/user-attachments/assets/91b8cc50-5e90-43ee-be0e-34f58f9991b4" /> SafeLink Local Shield 
 
-### "The Zero-Trust Sandbox Browser"
+### The Zero-Trust Sandbox Browser
 
 SafeLink Local Shield is an Android security browser designed to protect users from mobile banking malware, phishing links, and remote access trojans (RATs). It operates on a "Zero-Download" policy and utilizes Real-time Threat Intelligence to block malicious URLs instantly.
 
