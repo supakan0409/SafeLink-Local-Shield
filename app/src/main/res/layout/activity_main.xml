@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+    <!-- Header Bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
         android:paddingEnd="16dp"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Icon -->
         <TextView
             android:id="@+id/iconShield"
             android:layout_width="wrap_content"
@@ -27,24 +29,54 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- URL Address -->
         <TextView
             android:id="@+id/txtUrlAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="SafeLink Security Mode"
+            android:layout_marginEnd="4dp"
+            android:text="SafeLink"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textStyle="bold"
             android:singleLine="true"
             android:ellipsize="end"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnHistory"
             app:layout_constraintStart_toEndOf="@id/iconShield"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- History -->
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:contentDescription="History"
+            app:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSettings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Settings -->
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_outline_menu"
+            android:contentDescription="Settings"
+            app:tint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -55,6 +87,7 @@
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/headerContainer" />
 
+    <!-- WebView -->
     <WebView
         android:id="@+id/myWebView"
         android:layout_width="match_parent"
@@ -62,6 +95,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerContainer" />
 
+    <!-- Privacy Curtain -->
     <LinearLayout
         android:id="@+id/privacyCurtain"
         android:layout_width="match_parent"
